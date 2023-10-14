@@ -7,7 +7,6 @@ public class SingleNumber {
 
         int result = 0;
 
-        // побитовое XOR для каждого элемента массива
         for (int num : nums) {
             result ^= num;
         }
