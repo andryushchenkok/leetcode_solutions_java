@@ -11,12 +11,18 @@ public class FizzBuzz {
         List<String> answerList = new ArrayList<>();
 
         for (int i = 1; i <= n; i++) {
-            String num = "";
-            if (i % 3 == 0) num += "Fizz";
-            if (i % 5 == 0) num += "Buzz";
-            if (num == "") num = i + "";
-            answerList.add(num);
+            boolean isFizz = i % 3 == 0;
+            boolean isBuzz = i % 5 == 0;
+
+            if (isFizz && isBuzz) answerList.add("FizzBuzz");
+            else if (isFizz) answerList.add("Fizz");
+            else if (isBuzz) answerList.add("Buzz");
+            else answerList.add(i + "");
         }
         return answerList;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new FizzBuzz().fizzBuzz(15));
     }
 }
