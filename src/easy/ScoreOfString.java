@@ -15,6 +15,7 @@ public class ScoreOfString {
     }
 
     public static void main(String[] args) {
+
         System.out.println(new ScoreOfString().scoreOfString("zaz"));
     }
 }
